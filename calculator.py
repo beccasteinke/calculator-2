@@ -13,39 +13,44 @@ while True:
     input_string = input("Enter your equation > ")
     equation = input_string.split(' ')
 
+    if len(equation) < 3:
+        num2 = "0"
+    elif len(equation) >3:
+        num2 = equation[2]
+
     if equation[0] == "q":
         break
 
     #add
     if equation[0] == "+":
-        result = equation[1] + equation[2]
-        print(result)
+        result = int(equation[1]) + int(equation[2])
 
     #subtract
     if equation[0] == "-":
-        result = equation[1] - equation[2]
-        print(result)
+        result = int(equation[1]) - int(equation[2])
+
     #multiply
     if equation[0] == "*":
-        result = equation[1] * equation[2]
-        print(result)
+        result = int(equation[1]) * int(equation[2])
+
     #divide
     if equation[0] == "/":
-        result = equation[1] / equation[2]
-        print(result)
+        result = int(equation[1]) / int(equation[2])
+
     #square
     if equation[0] == "square":
-        result = equation[1] ** 2
-        print(result)
+        result = int(num1) ** 2
+
     #cube
     if equation[0] == "cube":
-        result = equation[1] ** 3
-        print(result)
+        result = int(equation[1]) ** 3
+
     #power
     if equation[0] == "pow":
-        result = equation[1] ** equation[2]
-        print(result)
+        result = int(equation[1]) ** int(equation[2])
+    
     #mod
-    if equation[0] == "mod"
-        result = equation[1] % equation[2]
-        print(result)
+    if equation[0] == "mod":
+        result = int(equation[1]) % int(equation[2])
+   
+    print(result)
